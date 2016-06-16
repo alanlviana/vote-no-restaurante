@@ -7,8 +7,8 @@
 	
 	<persistence-unit name="default">
 	
-		<!-- class>com.alanviana.voterestaurante.model.Restaurante</class>
-		 -->
+		 <class>com.alanviana.voterestaurante.model.Restaurante</class>
+		 
 	
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver" />
@@ -16,7 +16,7 @@
 			<property name="javax.persistence.jdbc.user" value="sa" />
 			<property name="javax.persistence.jdbc.password" value="" />
 			
-			<property name="hibernate.dialect" value="com.alanviana.voterestaurante..dialect.TemporaryHSQLDBDialect"/>
+			<property name="hibernate.dialect" value="com.alanviana.voterestaurante.dialect.TemporaryHSQLDBDialect"/>
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
