@@ -3,6 +3,7 @@ package com.alanviana.voterestaurante.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
@@ -16,6 +17,7 @@ public class Restaurante implements Serializable {
 	private static final long serialVersionUID = -2184410383424479342L;
 	
 	@Id
+	@GeneratedValue
 	@NotNull
 	private Integer id;
 	
