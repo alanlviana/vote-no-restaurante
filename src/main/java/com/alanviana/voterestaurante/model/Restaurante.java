@@ -1,7 +1,25 @@
 package com.alanviana.voterestaurante.model;
 
-public class Restaurante {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
+
+@Entity
+public class Restaurante implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2184410383424479342L;
+	
+	@Id
+	@NotNull
 	private Integer id;
+	
+	@Length(min=3,max=50)
 	private String nome;
 	
 	public Integer getId() {
