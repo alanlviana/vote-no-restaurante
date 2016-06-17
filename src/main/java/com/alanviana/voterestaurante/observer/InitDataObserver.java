@@ -26,7 +26,7 @@ public class InitDataObserver {
 		EntityManager manager = factory.createEntityManager();
 		
 		try{
-			//manager.getTransaction().begin();
+			manager.getTransaction().begin();
 			
 			Restaurante restaurante = new Restaurante();
 			restaurante.setNome("Outback");
@@ -48,7 +48,7 @@ public class InitDataObserver {
 			restaurante.setNome("Spock Burger");
 			manager.persist(restaurante);
 			
-			//manager.getTransaction().commit();			
+			manager.getTransaction().commit();			
 		}finally{
 			if (manager != null && manager.isOpen()) {
 				manager.close();
