@@ -29,7 +29,7 @@ public class IndexController {
 		GeradorEnquete gerador = new GeradorEnquete(restaurantes);	
 		List<Enquete> enquetes = gerador.gerar();
 		
-		result.use(Results.json()).withoutRoot().from(enquetes).serialize();
+		result.use(Results.json()).withoutRoot().from(enquetes).recursive().serialize();
 	}
 	
 }
