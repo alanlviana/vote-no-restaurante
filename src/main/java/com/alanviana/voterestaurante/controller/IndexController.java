@@ -5,6 +5,8 @@ import java.util.List;
 import javax.inject.Inject;
 
 import com.alanviana.voterestaurante.dao.RestauranteDAO;
+import com.alanviana.voterestaurante.model.Enquete;
+import com.alanviana.voterestaurante.model.GeradorEnquete;
 import com.alanviana.voterestaurante.model.Restaurante;
 
 import br.com.caelum.vraptor.Controller;
@@ -22,11 +24,12 @@ public class IndexController {
 	
 	@Get("/")
 	public void index(){
-		List<Restaurante> lista = restauranteDao.listAll();
+		List<Restaurante> restaurantes = restauranteDao.listAll();
 		
-		//result.use(Results.http()).body("quantidade:"+lista.size());
+		GeradorEnquete gerador = new GeradorEnquete(restaurantes);	
+		List<Enquete> enquetes = gerador.gerar();
 		
-		result.use(Results.json()).withoutRoot().from(lista).serialize();
+		result.use(Results.json()).withoutRoot().from(enquetes).serialize();
 	}
 	
 }
