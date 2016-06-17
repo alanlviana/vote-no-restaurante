@@ -2,12 +2,13 @@ package com.alanviana.voterestaurante.dao;
 
 import java.util.List;
 
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
 import com.alanviana.voterestaurante.model.Restaurante;
 
-
+@Default
 public class DefaultRestauranteDAO implements RestauranteDAO{
 
 	private final EntityManager entityManager;
