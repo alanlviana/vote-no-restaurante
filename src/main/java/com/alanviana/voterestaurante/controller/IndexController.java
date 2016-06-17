@@ -26,7 +26,7 @@ public class IndexController {
 		
 		//result.use(Results.http()).body("quantidade:"+lista.size());
 		
-		result.use(Results.json()).from("quantidade:"+lista.size()).serialize();
+		result.use(Results.json()).withoutRoot().from(lista).serialize();
 	}
 	
 }
