@@ -11,6 +11,14 @@ public class Enquete  {
 		this.restaurante2 = restaurante2;
 	}
 
+	public Restaurante getRestaurante1() {
+		return restaurante1;
+	}
+
+	public Restaurante getRestaurante2() {
+		return restaurante2;
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		
@@ -33,7 +41,6 @@ public class Enquete  {
 		
 		return false;
 	}
-	
 	
     
 }
