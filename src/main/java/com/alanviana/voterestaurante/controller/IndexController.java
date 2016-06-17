@@ -1,8 +1,11 @@
 package com.alanviana.voterestaurante.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import com.alanviana.voterestaurante.dao.RestauranteDAO;
+import com.alanviana.voterestaurante.model.Restaurante;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Get;
@@ -19,7 +22,9 @@ public class IndexController {
 	
 	@Get("/")
 	public void index(){
-		result.use(Results.http()).body("oi").setStatusCode(200);
+		List<Restaurante> lista = restauranteDao.listAll();
+		
+		result.use(Results.json()).from(lista);
 	}
 	
 }
