@@ -24,7 +24,9 @@ public class IndexController {
 	public void index(){
 		List<Restaurante> lista = restauranteDao.listAll();
 		
-		result.use(Results.json()).from(lista);
+		result.use(Results.http()).body("quantidade:"+lista.size());
+		
+		//result.use(Results.json()).from(lista);
 	}
 	
 }
