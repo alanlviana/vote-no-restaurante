@@ -92,9 +92,15 @@
 							<label for="email">Email:</label> <input type="email"
 								class="form-control" id="email">
 						</div>
+						<div class="alert alert-warning">
+							<strong>Atenção!</strong> Informe seu endereço de email antes de continuar!
+						</div>
 						<div class="form-group">
 							<label for="nome">Nome:</label> <input type="text"
 								class="form-control" id="nome">
+						</div>
+						<div class="alert alert-warning">
+							<strong>Atenção!</strong> Informe seu nome antes de continuar!
 						</div>
 
 					</form>
