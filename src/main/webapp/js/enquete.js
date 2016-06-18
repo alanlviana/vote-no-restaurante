@@ -15,20 +15,17 @@ Questionario.prototype.enviarQuestionario = function(event){
 	
 	event.preventDefault();
 	
-	var erros = false;
 	var email = $('#email').val();
 	var nome = $('#nome').val();
 	
 	if (!isEmail(email)){
 		$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
 		$('#alertaEmail').slideDown(500);
-		erros = true;
 	}
 	
 	if (nome == ''){
 		$('#alertaNome').html('<strong>Atenção!</strong> Informe seu nome antes de continuar!');
 		$('#alertaNome').slideDown(500);
-		erros = true;
 	}
 
 };

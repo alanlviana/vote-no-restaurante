@@ -62,7 +62,7 @@
 						<div class="caption-votar">
 							<p>
 								<a href='#' id='btnRestaurante1'
-									class="btn btn-success btn-block" role="button">Outback</a>
+									class="btn btn-success btn-block" role="button"></a>
 							</p>
 						</div>
 					</div>
@@ -74,7 +74,7 @@
 						<div class="caption-votar">
 							<p>
 								<a href='#' id='btnRestaurante2'
-									class="btn btn-success btn-block" role="button">The Fifties</a>
+									class="btn btn-success btn-block" role="button"></a>
 							</p>
 						</div>
 					</div>
