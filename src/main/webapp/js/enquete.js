@@ -15,22 +15,20 @@ Questionario.prototype.enviarQuestionario = function(event){
 	
 	event.preventDefault();
 	
-	alert('foi');
-	
-	//var email = $('#email').val();
-	//var nome = $('#nome').val();
+	var email = $('#email').val();
+	var nome = $('#nome').val();
 	
 	
 	
-	//if (!isEmail(email)){
-	//	$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
-	//	$('#alertaEmail').slideDown(500);
-	//}
+	if (!isEmail(email)){
+		$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
+		$('#alertaEmail').slideDown(500);
+	}
 	
-	//if (nome == ''){
-	//	$('#alertaNome').html('<strong>Atenção!</strong> Informe seu nome antes de continuar!');
-	//	$('#alertaNome').slideDown(500);
-	//}
+	if (nome == ''){
+		$('#alertaNome').html('<strong>Atenção!</strong> Informe seu nome antes de continuar!');
+		$('#alertaNome').slideDown(500);
+	}
 
 };
 
