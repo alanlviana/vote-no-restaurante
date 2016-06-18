@@ -6,6 +6,41 @@ var Questionario = function (){
 		
 };
 
+function isEmail(email) {
+	  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	  return regex.test(email);
+}
+
+Questionario.prototype.enviarQuestionario = function(event){
+	
+	event.preventDefault();
+	
+	var erros = false;
+	var email = $('#email').val();
+	var nome = $('#nome').val();
+	
+	if (email == ''){
+		$('#alertaEmail').html('<strong>Atenção!</strong> Informe seu endereço de email antes de continuar!');
+		$('#alertaEmail').slideDown(500);
+		erros = true;
+	}
+	
+	if (!isEmail(email)){
+		$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
+		$('#alertaEmail').slideDown(500);
+		erros = true;
+	}
+	
+	if (nome == ''){
+		$('#alertaNome').html('<strong>Atenção!</strong> Informe seu nome antes de continuar!');
+		$('#alertaNome').slideDown(500);
+		erros = true;
+	}
+
+	
+	return errors;
+};
+
 Questionario.prototype.exibirPergunta = function(){
 	
 	$('#btnRestaurante1').html(questionario.perguntas[questionario.posicao].restaurante1.nome);
@@ -85,6 +120,7 @@ var questionario = new Questionario();
 $( document ).ready( function(){
 	$('#btnRestaurante1').click(questionario.escolherRestaurante1);
 	$('#btnRestaurante2').click(questionario.escolherRestaurante2);	
+	$('#btnFinalizarPesquisa').click(questionario.enviarQuestionario);
 	
 	questionario.init();
 	

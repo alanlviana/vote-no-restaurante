@@ -13,6 +13,10 @@ body {
 	background-color:#3c763d;
 }
 
+#alertaNome,#alertaEmail{
+	display: none;
+}
+
 #divQuestionario{
 	display:none;
 }
