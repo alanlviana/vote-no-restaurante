@@ -1,6 +1,8 @@
 package com.alanviana.voterestaurante.controller;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.inject.Inject;
 
@@ -26,8 +28,9 @@ public class EnqueteController {
 	@Get("/enquete")
 	public void index() {
 		List<Restaurante> restaurantes = restauranteDao.listAll();
-
-		GeradorEnquete gerador = new GeradorEnquete(restaurantes);
+		// Cria um set com os resturantes
+		Set<Restaurante> listaRestaurante = new HashSet<>(restaurantes);
+		GeradorEnquete gerador = new GeradorEnquete(listaRestaurante);
 		List<Enquete> enquetes = gerador.gerar();
 
 		result.use(Results.json()).withoutRoot().from(enquetes).recursive().serialize();

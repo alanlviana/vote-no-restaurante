@@ -1,8 +1,10 @@
-package voterestaurante;
+package com.alanviana.voterestaurante.model;
 
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -14,11 +16,11 @@ import com.alanviana.voterestaurante.model.Restaurante;
 
 public class GeradorEnqueteTest {
 	
-	private List<Restaurante> restaurantes;
+	private Set<Restaurante> restaurantes;
 	
 	@Before
 	public void setup(){
-		restaurantes = new ArrayList<>();
+		restaurantes = new HashSet<>();
 		Restaurante restaurante = new Restaurante();
 		restaurante.setId(1);
 		restaurante.setNome("Nome 1");
@@ -49,7 +51,7 @@ public class GeradorEnqueteTest {
 	
 	@Test(expected=InvalidParameterException.class)
 	public void deveRecusarListaRestauranteComMenosDe2(){
-		List<Restaurante> lista = new ArrayList<>();
+		Set<Restaurante> lista = new HashSet<>();
 		new GeradorEnquete(lista);
 	}
 	
@@ -67,12 +69,49 @@ public class GeradorEnqueteTest {
 	}
 	
 	@Test
-	public void deveGerarListaComQuantidadeCorretaDeCombinacoes(){
+	public void deveGerarListaComQuantidadeCorretaDeCombinacoesCom5Restaurantes(){
 		GeradorEnquete gerador = new GeradorEnquete(restaurantes);
 		List<Enquete> enquetes =  gerador.gerar();
 	
 		assertEquals(10, enquetes.size());
 	
 	}
+	
+	@Test
+	public void deveGerarListaComQuantidadeCorretaDeCombinacoesCom2Restaurantes(){
+		
+		Set<Restaurante> listaCom2 = new HashSet<>();
+		Restaurante restaurante1 = new Restaurante();
+		restaurante1.setNome("Outback");
+		Restaurante restaurante2 = new Restaurante();
+		restaurante1.setNome("Starbucks");
+		listaCom2.add(restaurante1);
+		listaCom2.add(restaurante2);
+		
+		GeradorEnquete gerador = new GeradorEnquete(listaCom2);
+		List<Enquete> enquetes =  gerador.gerar();
+	
+		assertEquals(1, enquetes.size());
+	}
+	@Test
+	public void deveGerarListaComQuantidadeCorretaDeCombinacoesCom3Restaurantes(){
+		
+		Set<Restaurante> listaCom3 = new HashSet<>();
+		Restaurante restaurante1 = new Restaurante();
+		restaurante1.setNome("Outback");
+		Restaurante restaurante2 = new Restaurante();
+		restaurante1.setNome("Starbucks");
+		Restaurante restaurante3 = new Restaurante();
+		restaurante1.setNome("Big Kahuna Burger");		
+		listaCom3.add(restaurante1);
+		listaCom3.add(restaurante2);
+		listaCom3.add(restaurante3);
+		
+		GeradorEnquete gerador = new GeradorEnquete(listaCom3);
+		List<Enquete> enquetes =  gerador.gerar();
+	
+		assertEquals(3, enquetes.size());
+	}		
+	
 
 }

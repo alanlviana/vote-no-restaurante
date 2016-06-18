@@ -27,7 +27,7 @@ Questionario.prototype.init = function(){
 	    
 	   questionario.iniciarQuestionario();
 
-	    // Realizar preloading
+	    // Realizar preloading das imagens
 		$('<img/>')[0].src = 'img/3.jpg';
 		$('<img/>')[0].src = 'img/4.jpg';
 		$('<img/>')[0].src = 'img/5.jpg';

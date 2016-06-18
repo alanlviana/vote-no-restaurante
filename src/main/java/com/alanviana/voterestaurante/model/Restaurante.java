@@ -36,6 +36,26 @@ public class Restaurante implements Serializable {
 		this.nome = nome;
 	}
 	
+	@Override
+	public boolean equals(Object object){
+		// Contrato do Método
+		if (object == null) {
+			
+		}
+		
+		// Se não for restaurante
+		if (!(object instanceof Restaurante)){
+			return false;
+		}
+		
+		Restaurante referencia = (Restaurante) object;
+		if (this.nome == null || referencia.getNome() == null){
+			return false;
+		}
+		
+		
+		return this.nome.equals(referencia.getNome());
+	}
 	
 	
 }
