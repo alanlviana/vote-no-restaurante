@@ -12,7 +12,7 @@ function isEmail(email) {
 }
 
 Questionario.prototype.enviarQuestionario = function(event){
-	
+	console.log("Finalizar pesquisa!");
 	event.preventDefault();
 	
 	var email = $('#email').val();
