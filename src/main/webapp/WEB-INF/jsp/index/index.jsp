@@ -121,7 +121,7 @@
 	</div>
 	<!-- /container -->
 
-	<script src='js/jquery.mobile-1.4.5.js'></script>
+	<script src='js/jquery-3.0.0.min.js'></script>
 	<script src='js/enquete.js'></script>
 
 </body>
