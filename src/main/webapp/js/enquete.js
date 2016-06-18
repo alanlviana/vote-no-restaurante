@@ -15,6 +15,9 @@ Questionario.prototype.enviarQuestionario = function(event){
 	console.log("Finalizar pesquisa!");
 	event.preventDefault();
 	
+	$('#alertaEmail').hide();
+	$('#alertaNome').hide();
+	
 	var email = $('#email').val();
 	var nome = $('#nome').val();
 	
