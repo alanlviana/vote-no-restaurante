@@ -46,7 +46,7 @@ Questionario.prototype.enviarQuestionario = function(event){
 	//}
 	
 	for(i =0 ; i < 10;i++){
-		console.lo(i);
+		console.log(i);
 	}
 	
 	//console.log(restaurantesVotados);
