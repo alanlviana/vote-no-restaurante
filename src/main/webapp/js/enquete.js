@@ -46,8 +46,8 @@ Questionario.prototype.enviarQuestionario = function(event){
 	
 	var restaurantesVotados = [];
 	for(i =0 ; i < questionario.quantidade ;i++){
-		console.log('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
-		restaurantesVotados.push('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
+		console.log('restaurantes['+i+'].id='+questionario.perguntas[i].preferido);
+		restaurantesVotados.push('restaurantes['+i+'].id='+questionario.perguntas[i].preferido);
 	}
 	
 	console.log(restaurantesVotados);
