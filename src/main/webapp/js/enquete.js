@@ -84,12 +84,13 @@ Questionario.prototype.escolherRestaurante1 = function(event){
 	console.log("Voto para restaurante 1!");
 	event.preventDefault();
 	questionario.posicao = questionario.posicao +1;
-	questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
-	questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;	
-	
+
 	if (questionario.posicao  == questionario.quantidade ){
 		questionario.iniciarFormulario();
 		return;
+	}else{
+		questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
+		questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;			
 	}
 	
 	questionario.exibirPergunta();
@@ -104,6 +105,9 @@ Questionario.prototype.escolherRestaurante2 = function(event){
 	if (questionario.posicao == questionario.quantidade ){
 		questionario.iniciarFormulario();
 		return;
+	}else{
+		questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
+		questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;			
 	}	
 	
 	questionario.exibirPergunta();
