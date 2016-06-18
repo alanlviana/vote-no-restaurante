@@ -19,12 +19,6 @@ Questionario.prototype.enviarQuestionario = function(event){
 	var email = $('#email').val();
 	var nome = $('#nome').val();
 	
-	if (email == ''){
-		$('#alertaEmail').html('<strong>Atenção!</strong> Informe seu endereço de email antes de continuar!');
-		$('#alertaEmail').slideDown(500);
-		erros = true;
-	}
-	
 	if (!isEmail(email)){
 		$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
 		$('#alertaEmail').slideDown(500);
@@ -37,8 +31,6 @@ Questionario.prototype.enviarQuestionario = function(event){
 		erros = true;
 	}
 
-	
-	return errors;
 };
 
 Questionario.prototype.exibirPergunta = function(){
