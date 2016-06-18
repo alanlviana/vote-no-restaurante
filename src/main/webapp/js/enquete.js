@@ -40,8 +40,7 @@ Questionario.prototype.enviarQuestionario = function(event){
 	}
 	
 	var restaurantesVotados = [];
-	var i = 0;
-	for(i = 0;i < questionario.perguntas.lenght;i++){
+	for(i = 0;i < questionario.perguntas.lenght - 1;i++){
 		console.log('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
 		restaurantesVotados.push('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
 	}
@@ -71,11 +70,6 @@ Questionario.prototype.init = function(){
 	    
 	   questionario.iniciarQuestionario();
 
-	    // Realizar preloading das imagens
-		$('<img/>')[0].src = 'img/3.jpg';
-		$('<img/>')[0].src = 'img/4.jpg';
-		$('<img/>')[0].src = 'img/5.jpg';
-		   
     }});
 };
 
