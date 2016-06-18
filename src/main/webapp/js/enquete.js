@@ -3,6 +3,9 @@ var Questionario = function (){
 	this.quantidade = 0;
 	this.posicao = 0;
 	
+	this.restaurante1 = null;
+	this.restaurante2 = null;
+	
 		
 };
 
@@ -37,10 +40,10 @@ Questionario.prototype.enviarQuestionario = function(event){
 
 Questionario.prototype.exibirPergunta = function(){
 	
-	$('#btnRestaurante1').html(questionario.perguntas[questionario.posicao].restaurante1.nome);
-	$('#btnRestaurante2').html(questionario.perguntas[questionario.posicao].restaurante2.nome);	
-	$('#imagemRestaurante1').attr('src','img/'+questionario.perguntas[questionario.posicao].restaurante1.id+'.jpg');	
-	$('#imagemRestaurante2').attr('src','img/'+questionario.perguntas[questionario.posicao].restaurante2.id+'.jpg');	
+	$('#btnRestaurante1').html(questionario.restaurante1.nome);
+	$('#btnRestaurante2').html(questionario.restaurante2.nome);	
+	$('#imagemRestaurante1').attr('src','img/'+questionario.restaurante1.id+'.jpg');	
+	$('#imagemRestaurante2').attr('src','img/'+questionario.restaurante2.id+'.jpg');	
 	$('#statusQuestionario').html(' ('+(questionario.posicao+1)+'/'+questionario.quantidade+')');	
 	
 	
@@ -81,6 +84,8 @@ Questionario.prototype.escolherRestaurante1 = function(event){
 	console.log("Voto para restaurante 1!");
 	event.preventDefault();
 	questionario.posicao = questionario.posicao +1;
+	questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
+	questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;	
 	
 	if (questionario.posicao  == questionario.quantidade ){
 		questionario.iniciarFormulario();
@@ -93,6 +98,8 @@ Questionario.prototype.escolherRestaurante2 = function(event){
 	console.log("Voto para restaurante 2!");
 	event.preventDefault();
 	questionario.posicao = questionario.posicao +1;
+	questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
+	questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;	
 	
 	if (questionario.posicao == questionario.quantidade ){
 		questionario.iniciarFormulario();
@@ -105,6 +112,11 @@ Questionario.prototype.escolherRestaurante2 = function(event){
 
 Questionario.prototype.iniciarQuestionario = function(){
 	questionario.quantidade = questionario.perguntas.length;
+	questionario.posicao = 0;
+	
+	questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
+	questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;	
+	
 	questionario.exibirPergunta();
 };
 
