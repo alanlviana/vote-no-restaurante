@@ -21,20 +21,29 @@ Questionario.prototype.enviarQuestionario = function(event){
 	$('#alertaEmail').hide();
 	$('#alertaNome').hide();
 	
+	
 	var email = $('#email').val();
 	var nome = $('#nome').val();
-	
+	var erro = false;
 	
 	
 	if (!isEmail(email)){
 		$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
 		$('#alertaEmail').slideDown(500);
+		erro = true;
 	}
 	
 	if (nome == ''){
 		$('#alertaNome').html('<strong>Atenção!</strong> Informe seu nome antes de continuar!');
 		$('#alertaNome').slideDown(500);
+		erro = true;
 	}
+	
+	if (erro){
+		return;
+	}
+	
+	alert(questionario.perguntas);
 
 };
 
@@ -83,8 +92,10 @@ Questionario.prototype.iniciarFormulario = function(){
 Questionario.prototype.escolherRestaurante1 = function(event){
 	console.log("Voto para restaurante 1!");
 	event.preventDefault();
+	
+	questionario.perguntas[questionario.posicao]['preferido'] = questionario.restaurante1.id;
+	
 	questionario.posicao = questionario.posicao +1;
-
 	if (questionario.posicao  == questionario.quantidade ){
 		questionario.iniciarFormulario();
 		return;
@@ -98,9 +109,10 @@ Questionario.prototype.escolherRestaurante1 = function(event){
 Questionario.prototype.escolherRestaurante2 = function(event){
 	console.log("Voto para restaurante 2!");
 	event.preventDefault();
+	
+	questionario.perguntas[questionario.posicao]['preferido'] = questionario.restaurante2.id;
+	
 	questionario.posicao = questionario.posicao +1;
-	questionario.restaurante1 = questionario.perguntas[questionario.posicao].restaurante1;
-	questionario.restaurante2 = questionario.perguntas[questionario.posicao].restaurante2;	
 	
 	if (questionario.posicao == questionario.quantidade ){
 		questionario.iniciarFormulario();
