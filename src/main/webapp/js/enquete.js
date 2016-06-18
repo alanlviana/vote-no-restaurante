@@ -112,9 +112,9 @@ Questionario.prototype.iniciarQuestionario = function(){
 var questionario = new Questionario();
 
 $( document ).ready( function(){
-	$('#btnRestaurante1').vclick(questionario.escolherRestaurante1);
-	$('#btnRestaurante2').vclick(questionario.escolherRestaurante2);	
-	$('#btnFinalizarPesquisa').vclick(questionario.enviarQuestionario);
+	$('#btnRestaurante1').click(questionario.escolherRestaurante1);
+	$('#btnRestaurante2').click(questionario.escolherRestaurante2);	
+	$('#formulario').on('submit',questionario.enviarQuestionario);
 			
 			
 	questionario.init();

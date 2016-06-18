@@ -87,7 +87,7 @@
 					<h4>Informe seus dados de contato para finalizar a pesquisa:</h4>
 				</div>
 				<div class="col-sm-12 col-md-12">
-					<form role="form">
+					<form role="form" id="formulario">
 						<div class="form-group">
 							<label for="email">Email:</label> <input type="email"
 								class="form-control" id="email">
@@ -102,21 +102,17 @@
 						<div id="alertaNome" class="alert alert-warning">
 							<strong>Atenção!</strong> Informe seu nome antes de continuar!
 						</div>
-
+						<div class="form-group">
+						<input type="submit" class="btn btn-success btn-block"
+								class="form-control">
+						</div>
+								
 					</form>
 				</div>
 
 			</div>
 
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<p>
-						<a id="btnFinalizarPesquisa" href="#" class="btn btn-success btn-block" role="button">
-							Finalizar Pesquisa
-						</a>
-					</p>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 	<!-- /container -->
