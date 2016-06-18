@@ -17,22 +17,18 @@ function isEmail(email) {
 Questionario.prototype.enviarQuestionario = function(event){
 	console.log("Finalizar pesquisa!");
 	event.preventDefault();
-	
+
 	$('#alertaEmail').hide();
 	$('#alertaNome').hide();
-	
 	
 	var email = $('#email').val();
 	var nome = $('#nome').val();
 	var erro = false;
-	
-	
 	if (!isEmail(email)){
 		$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');
 		$('#alertaEmail').slideDown(500);
 		erro = true;
 	}
-	
 	if (nome == ''){
 		$('#alertaNome').html('<strong>Atenção!</strong> Informe seu nome antes de continuar!');
 		$('#alertaNome').slideDown(500);
@@ -43,7 +39,13 @@ Questionario.prototype.enviarQuestionario = function(event){
 		return;
 	}
 	
-	alert(questionario.perguntas);
+	var restaurantesVotados = [];
+	
+	for(var i = 0;i < questionario.perguntas.lenght;i++){
+		restaurantesVotados = 'restaurantes['+i+'].id='+questaionario.perguntas[i].preferido;
+	}
+	
+	console.log(restaurantesVotados);
 
 };
 
