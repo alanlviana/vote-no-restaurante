@@ -22,7 +22,7 @@ Questionario.prototype.exibirPergunta = function(){
 Questionario.prototype.init = function(){
 	
 	// Obter informações das enquetes
-	$.ajax({url: "enquetes.json", success: function(result){
+	$.ajax({url: "enquete", success: function(result){
        questionario.perguntas = result;
 	    
 	   questionario.iniciarQuestionario();

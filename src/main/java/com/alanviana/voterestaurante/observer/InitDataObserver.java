@@ -37,7 +37,7 @@ public class InitDataObserver {
 			manager.persist(restaurante);
 			
 			restaurante = new Restaurante();
-			restaurante.setNome("Big Kahuna Burger");
+			restaurante.setNome("Starbucks");
 			manager.persist(restaurante);
 						
 			restaurante = new Restaurante();
