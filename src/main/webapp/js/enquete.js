@@ -116,6 +116,10 @@ $( document ).ready( function(){
 	$('#btnRestaurante2').click(questionario.escolherRestaurante2);	
 	$('#btnFinalizarPesquisa').click(questionario.enviarQuestionario);
 	
+	// mobile
+	$('#btnFinalizarPesquisa').on('touchstart',questionario.enviarQuestionario);
+			
+			
 	questionario.init();
 	
 	
