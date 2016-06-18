@@ -39,13 +39,17 @@ Questionario.prototype.enviarQuestionario = function(event){
 		return;
 	}
 	
-	var restaurantesVotados = [];
-	for(i = 0;i < questionario.perguntas.lenght - 1;i++){
-		console.log('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
-		restaurantesVotados.push('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
+	//var restaurantesVotados = [];
+	//for(i = 0;i < questionario.perguntas.lenght - 1;i++){
+	//	console.log('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
+	//	restaurantesVotados.push('restaurantes['+i+'].id='+questaionario.perguntas[i].preferido);
+	//}
+	
+	for(i =0 ; i < 10;i++){
+		console.lo(i);
 	}
 	
-	console.log(restaurantesVotados);
+	//console.log(restaurantesVotados);
 
 };
 
