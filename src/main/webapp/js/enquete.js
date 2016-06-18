@@ -44,13 +44,28 @@ Questionario.prototype.enviarQuestionario = function(event){
 
 	//}
 	
-	var restaurantesVotados = [];
+	var parametros = [];
+	
 	for(i =0 ; i < questionario.quantidade ;i++){
-		console.log('restaurantes['+i+'].id='+questionario.perguntas[i].preferido);
-		restaurantesVotados.push('restaurantes['+i+'].id='+questionario.perguntas[i].preferido);
+		parametros.push('restaurantes['+i+'].id='+questionario.perguntas[i].preferido);
 	}
 	
-	console.log(restaurantesVotados);
+	parametros.push('nome='+nome);
+	parametros.push('email='+email);
+	
+	
+	$.ajax({
+		  type: "POST",
+		  url: 'questionario',
+		  data: parametro
+		}).done(function(){
+			alert('done');
+		})fail(function(){
+			alert('fail');
+		}).always(function(){
+			alert('always');
+		});
+	
 
 };
 
