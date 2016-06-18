@@ -15,10 +15,12 @@ Questionario.prototype.enviarQuestionario = function(event){
 	
 	event.preventDefault();
 	
-	var email = $('#email').val();
-	var nome = $('#nome').val();
-	
 	alert('foi');
+	
+	//var email = $('#email').val();
+	//var nome = $('#nome').val();
+	
+	
 	
 	//if (!isEmail(email)){
 	//	$('#alertaEmail').html('<strong>Atenção!</strong> Endereço de email inválido.');

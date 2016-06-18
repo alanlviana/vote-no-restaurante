@@ -111,7 +111,7 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
 					<p>
-						<a id="btnFinalizarPesquisa" href="#" class="btn btn-success btn-block" role="button"> <!--span class="glyphicon glyphicon-ok-circle"></span -->
+						<a id="btnFinalizarPesquisa" href="#" class="btn btn-success btn-block" role="button">
 							Finalizar Pesquisa
 						</a>
 					</p>
