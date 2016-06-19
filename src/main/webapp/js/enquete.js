@@ -44,7 +44,7 @@ Questionario.prototype.enviarQuestionario = function(event){
 
 	//}
 	
-	var parametros = [];
+	var parametros = new Object();
 	
 	for(i =0 ; i < questionario.quantidade ;i++){
 		parametros['restaurantes['+i+'].id']=questionario.perguntas[i].preferido;
@@ -52,11 +52,6 @@ Questionario.prototype.enviarQuestionario = function(event){
 	
 	parametros['nome'] = nome;
 	parametros['email'] = email;
-	
-	
-	console.log(parametros);
-	
-	console.log($.param(parametros));
 	
 	$.ajax({
 		  type: "POST",
