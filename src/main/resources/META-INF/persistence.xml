@@ -8,6 +8,8 @@
 	<persistence-unit name="default">
 	
 		 <class>com.alanviana.voterestaurante.model.Restaurante</class>
+		 <class>com.alanviana.voterestaurante.model.Questionario</class>
+		 <class>com.alanviana.voterestaurante.model.Voto</class>		  
 		 
 	
 		<properties>
