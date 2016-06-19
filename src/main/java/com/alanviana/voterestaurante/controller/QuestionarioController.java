@@ -5,14 +5,13 @@ import java.util.List;
 import com.alanviana.voterestaurante.model.Restaurante;
 
 import br.com.caelum.vraptor.Controller;
-import br.com.caelum.vraptor.Get;
+import br.com.caelum.vraptor.Post;
 
 @Controller
 public class QuestionarioController {
 	
-	@Get("/questionario")
+	@Post("/questionario")
 	public void cadastrar(String nome, String email, List<Restaurante> restaurantes){
 		
 	}	
-
 }
