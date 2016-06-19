@@ -47,11 +47,11 @@ Questionario.prototype.enviarQuestionario = function(event){
 	var parametros = [];
 	
 	for(i =0 ; i < questionario.quantidade ;i++){
-		parametros.push('restaurantes['+i+'].id='+questionario.perguntas[i].preferido);
+		parametros['restaurantes['+i+'].id']=questionario.perguntas[i].preferido;
 	}
 	
-	parametros.push('nome='+nome);
-	parametros.push('email='+email);
+	parametros['nome'] = nome;
+	parametros['email'] = email;
 	
 	
 	$.ajax({
