@@ -54,10 +54,14 @@ Questionario.prototype.enviarQuestionario = function(event){
 	parametros['email'] = email;
 	
 	
+	console.log(parametros);
+	var data = new Object();
+	data.data = parametros;
+	
 	$.ajax({
 		  type: "POST",
 		  url: 'questionario',
-		  data: parametros
+		  data: data
 		}).done(function(){
 			alert('done');
 		}).fail(function(){
