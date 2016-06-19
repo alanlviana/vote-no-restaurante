@@ -60,7 +60,7 @@ Questionario.prototype.enviarQuestionario = function(event){
 		  data: parametro
 		}).done(function(){
 			alert('done');
-		})fail(function(){
+		}).fail(function(){
 			alert('fail');
 		}).always(function(){
 			alert('always');
