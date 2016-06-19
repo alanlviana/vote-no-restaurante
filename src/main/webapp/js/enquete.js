@@ -56,7 +56,7 @@ Questionario.prototype.enviarQuestionario = function(event){
 	
 	console.log(parametros);
 	
-	
+	console.log($.param(parametros));
 	
 	$.ajax({
 		  type: "POST",
