@@ -61,7 +61,7 @@ Questionario.prototype.enviarQuestionario = function(event){
 	$.ajax({
 		  type: "POST",
 		  url: 'questionario',
-		  data: JSON.stringify(parametros)
+		  data: $.param(parametros)
 		}).done(function(){
 			alert('done');
 		}).fail(function(){
