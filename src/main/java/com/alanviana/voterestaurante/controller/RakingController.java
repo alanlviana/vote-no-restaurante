@@ -18,7 +18,7 @@ public class RakingController {
 		@Inject private Result result;
 		@Inject private VotoDAO dao;
 		
-		@Get("/raking")
+		@Get("/ranking")
 		public void raking(){
 			HashMap<Restaurante, Integer> contagem = dao.contarTodosAgrupandoPorRestaurante();
 			
