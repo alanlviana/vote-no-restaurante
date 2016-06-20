@@ -53,16 +53,24 @@ Questionario.prototype.enviarQuestionario = function(event){
 	parametros['nome'] = nome;
 	parametros['email'] = email;
 	
+	$('#btnFinalizarQuestionario').attr('disabled',true);
+	
 	$.ajax({
 		  type: "POST",
 		  url: 'questionario',
 		  data: $.param(parametros)
 		}).done(function(){
-			alert('done');
-		}).fail(function(){
-			alert('fail');
+			$('#divFormulario').slideUp(500, function(){
+				$('#divAgradecimento').slideDown(500);
+			});
+		}).fail(function(jqXHR, status, thrownError){
+			var responseText = jQuery.parseJSON(jqXHR.responseText);
+			console.log(responseText.message);			
+			$('#erroEnvio').html(responseText.message);
+			$('#erroEnvio').slideDown(500);			
+			
 		}).always(function(){
-			alert('always');
+			$('#btnFinalizarQuestionario').attr('disabled',false) 
 		});
 	
 

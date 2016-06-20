@@ -93,7 +93,8 @@
 								class="form-control" id="email">
 						</div>
 						<div id="alertaEmail" class="alert alert-warning">
-							<strong>Atenção!</strong> Informe seu endereço de email antes de continuar!
+							<strong>Atenção!</strong> Informe seu endereço de email antes de
+							continuar!
 						</div>
 						<div class="form-group">
 							<label for="nome">Nome:</label> <input type="text"
@@ -102,23 +103,30 @@
 						<div id="alertaNome" class="alert alert-warning">
 							<strong>Atenção!</strong> Informe seu nome antes de continuar!
 						</div>
+
+						<div id="erroEnvio" class="alert alert-error"></div>
+
 						<div class="form-group">
-						<input type="submit" class="btn btn-success btn-block"
-								class="form-control">
+							<input id="btnFinalizarQuestionario"
+								value="Finalizar Questionario" type="submit"
+								class="btn btn-success btn-block" class="form-control">
 						</div>
-								
+
 					</form>
 				</div>
 
 			</div>
-
-			
+			<div id='divAgradecimento'>
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<h2>Muito obrigado pela sua contribuição!</h2>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<!-- /container -->
+		<!-- /container -->
 
-	<script src='js/jquery-3.0.0.min.js'></script>
-	<script src='js/enquete.js'></script>
-
+		<script src='js/jquery-3.0.0.min.js'></script>
+		<script src='js/enquete.js'></script>
 </body>
 </html>
