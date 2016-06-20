@@ -121,10 +121,11 @@
 		<div id='divAgradecimento'>
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
-					<h1>Muito obrigado pela sua contribuição!</h1>
+					<h2>Muito obrigado pela sua contribuição!</h2>
 				</div>
 				<div class="col-sm-12 col-md-12">
-					<h1>Muito obrigado pela sua contribuição!</h1>
+					<a href='#' id='btnRanking'
+									class="btn btn-success btn-block" role="button">Exibir Ranking</a>
 				</div>				
 			</div>
 		</div>

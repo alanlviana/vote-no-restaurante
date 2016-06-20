@@ -27,10 +27,10 @@ public class QuestionarioController {
 		Questionario questionario;
 		
 		try{
-			questionario = new Questionario(nome,email,restaurantes);
+			questionario = new Questionario(nome, email, restaurantes);
 		}catch(InvalidParameterException exception){
 			result.use(Results.http()).setStatusCode(HttpServletResponse.SC_BAD_REQUEST);
-			result.use(Results.json()).from(exception.getMessage(),"message").serialize();
+			result.use(Results.json()).from(exception.getMessage(), "message").serialize();
 			return;
 		}
 		
@@ -39,7 +39,7 @@ public class QuestionarioController {
 			result.use(Results.http()).setStatusCode(HttpServletResponse.SC_CREATED);
 		}catch(Exception exception){
 			result.use(Results.http()).setStatusCode(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-			result.use(Results.json()).from(exception.getMessage(),"message").serialize();
+			result.use(Results.json()).from(exception.getMessage(), "message").serialize();
 			return;
 				
 		}
