@@ -32,10 +32,8 @@ public class DefaultVotoDAO implements VotoDAO {
 		
 		HashMap<Restaurante, Integer> contagem = new HashMap<>();
 		@SuppressWarnings("unchecked")
-		List<Object[]> results = entityManager.createQuery("SELECT v.restaurante.id AS id, COUNT(v) AS total "
-														   + "FROM Voto AS v "
-														   + "GROUP BY v.restaurante.id "
-														   + "ORDER BY v.restaurante.id ASC").getResultList();		
+		List<Object[]> results = entityManager.createQuery("SELECT r.id AS id, (SELECT COUNT(v) FROM Voto as v WHERE v.restaurante.id = r.id) AS total "
+														   + "FROM Restaurante AS r ").getResultList();		
 		for (Object[] result : results) {
 		    Integer id = (Integer) result[0];
 		    int count = ((Number) result[1]).intValue();

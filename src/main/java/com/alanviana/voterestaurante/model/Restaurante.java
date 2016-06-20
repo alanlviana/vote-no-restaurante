@@ -57,5 +57,10 @@ public class Restaurante implements Serializable {
 		return this.nome.equals(referencia.getNome());
 	}
 	
+	@Override
+	public String toString(){
+		return this.id.toString();
+	}
+	
 	
 }
