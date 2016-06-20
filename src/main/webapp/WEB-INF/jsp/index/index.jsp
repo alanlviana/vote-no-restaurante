@@ -116,12 +116,16 @@
 				</div>
 
 			</div>
-			<div id='divAgradecimento'>
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-						<h2>Muito obrigado pela sua contribuição!</h2>
-					</div>
+
+		</div>
+		<div id='divAgradecimento'>
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<h1>Muito obrigado pela sua contribuição!</h1>
 				</div>
+				<div class="col-sm-12 col-md-12">
+					<h1>Muito obrigado pela sua contribuição!</h1>
+				</div>				
 			</div>
 		</div>
 		<!-- /container -->
