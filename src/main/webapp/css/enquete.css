@@ -17,6 +17,10 @@ body {
 	display: none;
 }
 
+#divAgradecimento{
+	display:none;
+}
+
 #divQuestionario{
 	display:none;
 }

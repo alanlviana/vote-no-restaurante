@@ -78,6 +78,10 @@ Questionario.prototype.enviarQuestionario = function(event){
 
 Questionario.prototype.exibirPergunta = function(){
 	
+	// Limpar a imagem dá um efeito imediato de mudança ao votar
+	$('#imagemRestaurante1').attr('src','');	
+	$('#imagemRestaurante2').attr('src','');	
+	
 	$('#btnRestaurante1').html(questionario.restaurante1.nome);
 	$('#btnRestaurante2').html(questionario.restaurante2.nome);	
 	$('#imagemRestaurante1').attr('src','img/'+questionario.restaurante1.id+'.jpg');	
