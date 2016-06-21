@@ -56,6 +56,7 @@ public class Questionario implements Serializable{
 		for(Restaurante restaurante : restaurantes){
 			Voto voto = new Voto();
 			voto.setRestaurante(restaurante);
+			voto.setQuestionario(this);
 			votos.add(voto);
 		}		
 		

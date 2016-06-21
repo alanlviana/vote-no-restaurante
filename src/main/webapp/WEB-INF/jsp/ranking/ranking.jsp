@@ -20,17 +20,7 @@
 <link
 	href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext'
 	rel='stylesheet' type='text/css'>
-
-
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<!--script src="../../assets/js/ie-emulation-modes-warning.js"></script -->
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<link href="css/enquete.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,8 +37,9 @@
 		</div>
 		<div id='divGlobal'>
 			<div class="row">
-				<c:if test="${rakingGlobal != null}">
+				<c:if test="${rankingUsuario != null}">
 					<div class="col-sm-12 col-md-6">
+						<h3>Seu Ranking</h3>
 						<div class="table-responsive">
 							<table class="table">
 								<thead>
@@ -59,11 +50,11 @@
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach items="${rakingGlobal}" var="posicao">
+									<c:forEach items="${rankingUsuario}" var="usuario">
 										<tr>
-											<td>${posicao.posicao}</td>
-											<td>${posicao.restaurante.nome}</td>
-											<td>${posicao.quantidade}</td>
+											<td>${usuario.posicao}</td>
+											<td>${usuario.restaurante.nome}</td>
+											<td>${usuario.quantidade}</td>
 										</tr>
 									</c:forEach>
 								</tbody>
@@ -72,8 +63,29 @@
 					</div>
 
 				</c:if>
-
-
+				<div class="col-sm-12 col-md-6">
+					<h3>Ranking da Comunidade</h3>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Restaurante</th>
+									<th>Votos</th>
+								</tr>
+							</thead>
+							<tbody>
+								<c:forEach items="${rankingGlobal}" var="global">
+									<tr>
+										<td>${global.posicao}</td>
+										<td>${global.restaurante.nome}</td>
+										<td>${global.quantidade}</td>
+									</tr>
+								</c:forEach>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- /container -->

@@ -45,7 +45,7 @@ public class GeradorRanking {
 			
 			PosicaoRanking posicao = copia.get(i);
 			if (! ultimaQuantidade.equals(posicao.getQuantidade())){
-				ultimaPosicao = ultimaPosicao + 1;
+				ultimaPosicao = i+1;
 			}
 			
 			copia.get(i).setPosicao(ultimaPosicao);

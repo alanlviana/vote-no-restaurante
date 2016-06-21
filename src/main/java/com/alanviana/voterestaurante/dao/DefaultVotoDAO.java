@@ -52,20 +52,17 @@ public class DefaultVotoDAO implements VotoDAO {
 	@Override
 	public List<PosicaoRanking> contarTodosAgrupandoPorRestauranteFiltrandoPorQuestionario(Questionario questionario) {
 		Query query = entityManager.createQuery(
-				"SELECT r.id AS id, (SELECT COUNT(v) FROM Voto as v WHERE v.restaurante.id = r.id AND v.questionario = ?) AS total "
+				"SELECT r , (SELECT COUNT(v) FROM Voto as v WHERE v.restaurante.id = r.id AND v.questionario = :questionario) AS total "
 						+ "FROM Restaurante AS r ");
-	    query.setParameter(0, questionario);
+	    query.setParameter("questionario", questionario);
 	    
 	    @SuppressWarnings("unchecked")
 		List<Object[]> results =	query.getResultList();
 
 		GeradorRanking gerador = new GeradorRanking();
 		for (Object[] result : results) {
-			Integer id = (Integer) result[0];
+			Restaurante restaurante = (Restaurante) result[0];
 			int count = ((Number) result[1]).intValue();
-
-			Restaurante restaurante = new Restaurante();
-			restaurante.setId(id);
 
 			gerador.adicionarRestaurante(restaurante, count);
 		}

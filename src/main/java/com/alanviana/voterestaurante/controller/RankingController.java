@@ -26,11 +26,11 @@ public class RankingController {
 			List<PosicaoRanking> contagemGlobal = dao.contarTodosAgrupandoPorRestaurante();
 			List<PosicaoRanking> contagemUsuario = null;
 			if (sessao.temQuestionario()){
-				//contagemUsuario = dao.contarTodosAgrupandoPorRestauranteFiltrandoPorQuestionario(sessao.getQuestionario());
+				contagemUsuario = dao.contarTodosAgrupandoPorRestauranteFiltrandoPorQuestionario(sessao.getQuestionario());
 			}
 			
-			result.include("rakingGlobal", contagemGlobal);
-			result.include("rakingUsuario", contagemUsuario);
+			result.include("rankingGlobal", contagemGlobal);
+			result.include("rankingUsuario", contagemUsuario);
 			
 		}
 	

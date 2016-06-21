@@ -19,8 +19,6 @@ public class Restaurante implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	
-	@Length(min=3,max=50)
 	private String nome;
 	
 	public Integer getId() {
