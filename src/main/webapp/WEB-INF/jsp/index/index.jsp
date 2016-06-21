@@ -124,7 +124,7 @@
 					<h2>Muito obrigado pela sua contribuição!</h2>
 				</div>
 				<div class="col-sm-12 col-md-12">
-					<a href='#' id='btnRanking'
+					<a href='ranking' id='btnRanking'
 									class="btn btn-success btn-block" role="button">Exibir Ranking</a>
 				</div>				
 			</div>

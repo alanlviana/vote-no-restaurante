@@ -1,11 +1,14 @@
 package com.alanviana.voterestaurante.dao;
 
-import java.util.HashMap;
+import java.util.List;
 
-import com.alanviana.voterestaurante.model.Restaurante;
+import com.alanviana.voterestaurante.model.PosicaoRanking;
+import com.alanviana.voterestaurante.model.Questionario;
 
 public interface VotoDAO {
 
-	public HashMap<Restaurante, Integer> contarTodosAgrupandoPorRestaurante(); 
+	public List<PosicaoRanking> contarTodosAgrupandoPorRestaurante();
+
+	public List<PosicaoRanking> contarTodosAgrupandoPorRestauranteFiltrandoPorQuestionario(Questionario questionario); 
 	
 }

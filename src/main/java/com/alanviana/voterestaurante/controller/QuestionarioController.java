@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.alanviana.voterestaurante.dao.QuestionarioDAO;
 import com.alanviana.voterestaurante.model.Questionario;
+import com.alanviana.voterestaurante.model.QuestionarioSessao;
 import com.alanviana.voterestaurante.model.Restaurante;
 
 import br.com.caelum.vraptor.Controller;
@@ -20,6 +21,7 @@ public class QuestionarioController {
 	
 	@Inject private Result result;
 	@Inject private QuestionarioDAO dao;
+	@Inject private QuestionarioSessao sessao;
 	
 	@Post("/questionario")
 	public void cadastrar(String nome, String email, List<Restaurante> restaurantes){
@@ -36,6 +38,8 @@ public class QuestionarioController {
 		
 		try{
 			dao.add(questionario);
+			sessao.setQuestionario(questionario);
+			
 			result.use(Results.http()).setStatusCode(HttpServletResponse.SC_CREATED);
 		}catch(Exception exception){
 			result.use(Results.http()).setStatusCode(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

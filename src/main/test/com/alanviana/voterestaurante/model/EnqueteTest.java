@@ -19,9 +19,9 @@ public class EnqueteTest {
 	@Test(expected=InvalidParameterException.class)
 	public void naoPodeSerCriadaComResturantesIguais(){
 		Restaurante restaurante1 = new Restaurante();
-		restaurante1.setNome("Outback");
+		restaurante1.setId(1);
 		Restaurante restaurante2 = new Restaurante();
-		restaurante2.setNome("Outback");
+		restaurante2.setId(1);
 		
 		
 		new Enquete(restaurante1, restaurante2);		
@@ -31,9 +31,9 @@ public class EnqueteTest {
 	@Test
 	public void equalsDeveSerIgualParaOutraEnqueteComMesmosRestaurantes(){
 		Restaurante restaurante1 = new Restaurante();
-		restaurante1.setNome("Outback");
+		restaurante1.setId(1);
 		Restaurante restaurante2 = new Restaurante();
-		restaurante2.setNome("Starbucks");
+		restaurante2.setId(2);
 		
 		Enquete enquete1 = new Enquete(restaurante1,restaurante2);
 		Enquete enquete2 = new Enquete(restaurante1,restaurante2);

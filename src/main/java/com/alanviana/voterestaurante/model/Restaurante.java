@@ -49,12 +49,12 @@ public class Restaurante implements Serializable {
 		}
 		
 		Restaurante referencia = (Restaurante) object;
-		if (this.nome == null || referencia.getNome() == null){
+		if (this.id == null || referencia.getId() == null){
 			return false;
 		}
 		
 		
-		return this.nome.equals(referencia.getNome());
+		return this.id.equals(referencia.getId());
 	}
 	
 	@Override
