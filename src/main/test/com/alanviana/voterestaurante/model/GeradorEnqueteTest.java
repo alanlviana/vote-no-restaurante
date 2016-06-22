@@ -63,7 +63,7 @@ public class GeradorEnqueteTest {
 	@Test
 	public void deveGerarListaComEnquetes(){
 		GeradorEnquete gerador = new GeradorEnquete(restaurantes);
-		List<Enquete> enquetes =  gerador.gerar();
+		List<Enquete> enquetes =  gerador.gerarLista();
 	
 		assertNotNull(enquetes);
 	}
@@ -71,7 +71,7 @@ public class GeradorEnqueteTest {
 	@Test
 	public void deveGerarListaComQuantidadeCorretaDeCombinacoesCom5Restaurantes(){
 		GeradorEnquete gerador = new GeradorEnquete(restaurantes);
-		List<Enquete> enquetes =  gerador.gerar();
+		List<Enquete> enquetes =  gerador.gerarLista();
 	
 		assertEquals(10, enquetes.size());
 	
@@ -89,7 +89,7 @@ public class GeradorEnqueteTest {
 		listaCom2.add(restaurante2);
 		
 		GeradorEnquete gerador = new GeradorEnquete(listaCom2);
-		List<Enquete> enquetes =  gerador.gerar();
+		List<Enquete> enquetes =  gerador.gerarLista();
 	
 		assertEquals(1, enquetes.size());
 	}
@@ -108,7 +108,7 @@ public class GeradorEnqueteTest {
 		listaCom3.add(restaurante3);
 		
 		GeradorEnquete gerador = new GeradorEnquete(listaCom3);
-		List<Enquete> enquetes =  gerador.gerar();
+		List<Enquete> enquetes =  gerador.gerarLista();
 	
 		assertEquals(3, enquetes.size());
 	}		

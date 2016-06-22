@@ -3,6 +3,10 @@ package com.alanviana.voterestaurante.model;
 import java.security.InvalidParameterException;
 
 import org.junit.Test;
+
+import com.alanviana.voterestaurante.model.Enquete;
+import com.alanviana.voterestaurante.model.Restaurante;
+
 import static org.junit.Assert.*;
 
 public class EnqueteTest {

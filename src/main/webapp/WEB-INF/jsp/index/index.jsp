@@ -7,9 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="">
+<meta name="description" content="A Bluesoft quer saber quais são seus restaurantes favoritos! Responda a enquete!">
 <meta name="author" content="Alan Luiz Viana">
-<!-- link rel="icon" href="../../favicon.ico" -->
 
 <title>Vote no Restaurante! - Enquete</title>
 
@@ -28,18 +27,21 @@
 	<div class="container">
 		<div class="header clearfix">
 			<div class="row">
-				<div class="col-sm-12 col-md-8">
-					<img class='img-responsive' src="VoteNoRestaurante.png" />
-					<!--h3 class="text-muted">Vote no Restaurante</h3 -->
+				<div class="col-sm-12">
+					<h1 class="text-muted">Vote no Restaurante</h1>
+					<div class="box-separador">
+						<hr/>
+						<span></span>
+					</div>					
 				</div>
-
 			</div>
 		</div>
 		<div id='divQuestionario'>
 			<div class="row">
-				<div class="col-sm-6 col-md-4">
+				<div class="col-sm-12 col-md-12">
+					<p>A <span class="cinzaBluesoft">Blue</span><span class="azulBluesoft">soft</span> quer saber quais são seus restaurantes favoritos!</p>
 					<h3>
-						Você prefere?<small id='statusQuestionario'> (1/10)</small>
+						O que você prefere?<small id='statusQuestionario'> (1/10)</small>
 					</h3>
 				</div>
 			</div>
@@ -57,7 +59,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-6">
+				<div class="col-xs-6 col-sm-6 col-md-6 pull-right">
 					<div class="thumbnail thumbnail-sem-borda">
 						<img id="imagemRestaurante2" src="" width=400 height=400
 							alt="The Fifties Logo">
@@ -98,7 +100,7 @@
 
 						<div class="form-group">
 							<input id="btnFinalizarQuestionario"
-								value="Finalizar Questionario" type="submit"
+								value="Finalizar Questionário" type="submit"
 								class="btn btn-success btn-block" class="form-control">
 						</div>
 

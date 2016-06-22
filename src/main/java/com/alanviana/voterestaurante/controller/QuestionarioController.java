@@ -23,6 +23,7 @@ public class QuestionarioController {
 	@Inject private QuestionarioDAO dao;
 	@Inject private QuestionarioSessao sessao;
 	
+
 	@Post("/questionario")
 	public void cadastrar(String nome, String email, List<Restaurante> restaurantes){
 		
@@ -47,5 +48,7 @@ public class QuestionarioController {
 			return;
 				
 		}
-	}	
+	}
+
+
 }

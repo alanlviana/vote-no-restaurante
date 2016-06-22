@@ -21,8 +21,6 @@ public class RankingController {
 		
 		@Get("/ranking")
 		public void ranking(){
-			
-			
 			List<PosicaoRanking> contagemGlobal = dao.contarTodosAgrupandoPorRestaurante();
 			List<PosicaoRanking> contagemUsuario = null;
 			if (sessao.temQuestionario()){

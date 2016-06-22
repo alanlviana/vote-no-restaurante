@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="">
+<meta name="description" content="A Bluesoft quer saber quais são seus restaurantes favoritos! Responda a enquete!">
 <meta name="author" content="Alan Luiz Viana">
 <!-- link rel="icon" href="../../favicon.ico" -->
 
@@ -28,11 +28,15 @@
 	<div class="container">
 		<div class="header clearfix">
 			<div class="row">
-				<div class="col-sm-12 col-md-8">
-					<img class='img-responsive' src="VoteNoRestaurante.png" />
+				<div class="col-sm-12">
+					<!-- img class='img-responsive' src="VoteNoRestaurante.png" / -->
 					<!--h3 class="text-muted">Vote no Restaurante</h3 -->
+					<h1 class="text-muted">Vote no Restaurante</h1>
+					<div class="box-separador">
+						<hr/>
+						<span></span>
+					</div>					
 				</div>
-
 			</div>
 		</div>
 		<div id='divGlobal'>
@@ -88,6 +92,12 @@
 				</div>
 			</div>
 		</div>
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<a href='/' 
+									class="btn btn-success btn-block" role="button">Votar novamente</a>
+				</div>				
+			</div>		
 		<!-- /container -->
 
 		<script src='js/jquery-3.0.0.min.js'></script>

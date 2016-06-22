@@ -5,6 +5,36 @@ body {
   font-family:'Lato', serif;
 }
 
+h1{
+	font-weight: 300; 
+	text-align: center; 
+	margin-bottom: 25px;
+}
+
+.text-muted{
+	font-size:2em;
+}
+.box-separador{
+	position: relative;
+}
+.box-separador hr{
+	margin: 0; 
+	padding-top: 20px; 
+	border-color: #dbdbdb;
+}
+.box-separador span{
+	width: 280px; 
+	background-color: rgba(0,0,0,0.3); 
+	position: absolute; 
+	left: 0; 
+	right: 0; 
+	margin: 0 auto; 
+	height: 10px; 
+	display: block; 
+	top: -5px;
+}
+
+
 .btn-primary{
 	background-color:#318573;
 	border-color:#2b6a5d;
@@ -12,6 +42,17 @@ body {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
 	background-color:#3c763d;
 }
+
+.azulBluesoft{
+	color:#2569ad;
+}
+.cinzaBluesoft{
+	color:#3e3e3d;
+}
+.cinzaBluesoft,.azulBluesoft{
+	font-weight:bold;
+}
+
 
 #alertaNome,#alertaEmail{
 	display: none;
@@ -27,9 +68,8 @@ body {
 #divFormulario{
 	display:none;
 }
-/* Everything but the jumbotron gets side spacing for mobile first views */
+
 .header,
-.marketing,
 .footer {
   padding-right: 15px;
   padding-left: 15px;
@@ -47,26 +87,24 @@ body {
      border: 0px;
 }
 
-/* Custom page header */
 .header {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
 }
-/* Make the masthead heading the same height as the navigation */
+
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
 }
 
-/* Custom page footer */
+
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-/* Customize container */
+
 @media (min-width: 768px) {
   .container {
     max-width: 960px;
@@ -76,39 +114,27 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
-}
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
+
   .header,
-  .marketing,
   .footer {
     padding-right: 0;
     padding-left: 0;
   }
-  /* Space out the masthead */
+
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+
+}
+
+@media screen and (max-width: 767px){
+  .box-separador span{width: 150px;}
+}
+
+@media screen and (max-width: 330px){
+  .text-muted{
+	font-size:1.7em;
   }
 }

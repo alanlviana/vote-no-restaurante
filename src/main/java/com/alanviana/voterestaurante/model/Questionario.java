@@ -37,9 +37,7 @@ public class Questionario implements Serializable{
 	public Questionario(){}
 	
 	public Questionario(String nome, String email,List<Restaurante> restaurantes) {
-		this.nome = nome;
-		this.email = email;
-		
+
 		if (nome == null || "".equals(nome)) {
 			throw new InvalidParameterException("Nome não pode ser nulo ou vazio.");
 		}
@@ -49,9 +47,11 @@ public class Questionario implements Serializable{
 		}
 		
 		if (restaurantes == null || restaurantes.isEmpty()) {
-			throw new InvalidParameterException("Lista de restaurantes não pode ser nula ou vazio.");
+			throw new InvalidParameterException("Lista de restaurantes não pode ser nula ou vazia.");
 		}
-		
+
+		this.nome = nome;
+		this.email = email;		
 		this.votos = new ArrayList<>();
 		for(Restaurante restaurante : restaurantes){
 			Voto voto = new Voto();

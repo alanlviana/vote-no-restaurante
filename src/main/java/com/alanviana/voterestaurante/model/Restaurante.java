@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.hibernate.validator.constraints.Length;
 
 @Entity
 public class Restaurante implements Serializable {
@@ -36,12 +35,11 @@ public class Restaurante implements Serializable {
 	
 	@Override
 	public boolean equals(Object object){
-		// Contrato do Método
+		
 		if (object == null) {
 			
 		}
 		
-		// Se não for restaurante
 		if (!(object instanceof Restaurante)){
 			return false;
 		}
@@ -50,7 +48,6 @@ public class Restaurante implements Serializable {
 		if (this.id == null || referencia.getId() == null){
 			return false;
 		}
-		
 		
 		return this.id.equals(referencia.getId());
 	}

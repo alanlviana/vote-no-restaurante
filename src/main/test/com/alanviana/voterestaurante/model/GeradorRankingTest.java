@@ -5,6 +5,10 @@ import java.util.List;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import com.alanviana.voterestaurante.model.GeradorRanking;
+import com.alanviana.voterestaurante.model.PosicaoRanking;
+import com.alanviana.voterestaurante.model.Restaurante;
+
 public class GeradorRankingTest {
 
 	
