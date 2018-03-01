@@ -10,7 +10,7 @@
 <meta name="description" content="A Bluesoft quer saber quais são seus restaurantes favoritos! Responda a enquete!">
 <meta name="author" content="Alan Luiz Viana">
 
-<title>Vote no Restaurante! - Enquete</title>
+<title>Vote no Jogador! - Enquete</title>
 
 <!-- Bootstrap -->
 <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 		<div class="header clearfix">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="text-muted">Vote no Restaurante</h1>
+					<h1 class="text-muted">Vote no Jogador</h1>
 					<div class="box-separador">
 						<hr/>
 						<span></span>
@@ -37,14 +37,6 @@
 			</div>
 		</div>
 		<div id='divQuestionario'>
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<p>A <span class="cinzaBluesoft">Blue</span><span class="azulBluesoft">soft</span> quer saber quais são seus restaurantes favoritos!</p>
-					<h3>
-						O que você prefere?<small id='statusQuestionario'> (1/10)</small>
-					</h3>
-				</div>
-			</div>
 
 			<div class="row">
 				<div class="col-xs-6 col-sm-6 col-md-6">

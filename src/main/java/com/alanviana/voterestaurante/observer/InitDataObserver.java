@@ -29,23 +29,23 @@ public class InitDataObserver {
 			manager.getTransaction().begin();
 			
 			Restaurante restaurante = new Restaurante();
-			restaurante.setNome("Outback");
+			restaurante.setNome("Lionel Messi");
 			manager.persist(restaurante);
 			
 			restaurante = new Restaurante();
-			restaurante.setNome("The Fifties");
+			restaurante.setNome("Ronaldo");
 			manager.persist(restaurante);
 			
 			restaurante = new Restaurante();
-			restaurante.setNome("Starbucks");
+			restaurante.setNome("Ronaldinho Gaúcho");
 			manager.persist(restaurante);
 						
 			restaurante = new Restaurante();
-			restaurante.setNome("Rock'n'Roll Burger");
+			restaurante.setNome("Zinédine Zidane");
 			manager.persist(restaurante);
 			
 			restaurante = new Restaurante();
-			restaurante.setNome("Spock Burger");
+			restaurante.setNome("Romário");
 			manager.persist(restaurante);
 			
 			manager.getTransaction().commit();			
