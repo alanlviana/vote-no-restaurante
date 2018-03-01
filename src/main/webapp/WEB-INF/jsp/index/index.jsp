@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="A Bluesoft quer saber quais são seus restaurantes favoritos! Responda a enquete!">
+<meta name="description" content="Queremos saber quantos jogadores são melhores que o Messi! Responda a enquete!">
 <meta name="author" content="Alan Luiz Viana">
 
 <title>Vote no Jogador! - Enquete</title>
