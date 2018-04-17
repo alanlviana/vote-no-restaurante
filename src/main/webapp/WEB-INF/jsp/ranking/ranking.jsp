@@ -7,12 +7,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description" content="A Bluesoft quer saber quais são seus restaurantes favoritos! Responda a enquete!">
+<meta name="description" content="Queremos saber qual a melhor comida do mundo! Responda a enquete!">
 <meta name="author" content="Alan Luiz Viana">
 <!-- link rel="icon" href="../../favicon.ico" -->
 
-<title>Vote no Restaurante! - Enquete</title>
+<title>Vote no Prato! - Enquete</title>
 
 <!-- Bootstrap -->
 <link href="dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +30,7 @@
 				<div class="col-sm-12">
 					<!-- img class='img-responsive' src="VoteNoRestaurante.png" / -->
 					<!--h3 class="text-muted">Vote no Restaurante</h3 -->
-					<h1 class="text-muted">Vote no Restaurante</h1>
+					<h1 class="text-muted">Vote no Prato!</h1>
 					<div class="box-separador">
 						<hr/>
 						<span></span>
@@ -49,7 +48,7 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>Restaurante</th>
+										<th>Prato</th>
 										<th>Votos</th>
 									</tr>
 								</thead>
@@ -74,7 +73,7 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Restaurante</th>
+									<th>Prato</th>
 									<th>Votos</th>
 								</tr>
 							</thead>
